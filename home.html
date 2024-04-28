@@ -18,7 +18,179 @@
             overflow: hidden;
         }
 
-        @media (max-width: 1280px) {
+        @media (width: 1024px) {
+            body {
+            background-image: url(./images/home/Bg3.PNG);  
+            background-size: cover; 
+            height: 82vh;
+            overflow: hidden;
+        }
+        #home{
+            background-size: contain; 
+            background-repeat: no-repeat;
+            width: 38vw;
+            height: 20vh;
+            position: relative;
+            left: -10vw;
+            bottom: -42vh;
+            overflow: hidden;
+            z-index: -100;    
+
+        }
+        #pony{
+            background-size: contain; 
+            background-repeat: no-repeat;
+            width: 37vw;
+            height: 22vh;
+            position: relative;
+            left: 40vw;
+            bottom: -18vh;
+            overflow: hidden;
+            z-index: -100;  
+           
+        }
+        #upbeep {
+            background: url(./images/home/Upbeep\ world.PNG);
+            background-size: contain; 
+            background-repeat: no-repeat;
+            width: 60vw;
+            height: 25vh;
+            position: absolute;
+            left: 20vw;
+            top: 5vh;
+            overflow: hidden;
+        }
+        #cr {
+            background: url(./images/home/upbeep2024.PNG);
+            background-size: contain; 
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 100px;
+            z-index: -100;
+        }
+            #mall {
+            position: relative;
+            width: 53vw;
+            height: 33vw;
+            top: -18vh;
+            display: block;
+            left: -9vw;
+            background: url("./images/home/Mall1.PNG");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            transition: background 0.3s ease;
+        }
+        #mall:hover {
+            background: url("./images/home/Mall2.PNG");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .characterImg {
+            position: fixed;
+            width: 40%;
+            height: auto;
+            bottom: 0;
+            left: -2vw;
+            z-index: 1;
+        }
+        #ID1 {
+            position: fixed;
+            width: 38vw;
+            height: 30vw;
+            bottom: 17vh;
+            right: -1vw;
+            background: url("./images/home/Card1.PNG");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            transition: background 0.3s ease;
+        }
+        #ID1:hover {
+            background: url("./images/home/Card2.PNG");
+            width: 38vw;
+            height: 30vw;
+            bottom: 17vh;
+            right: -1vw;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        #phone {
+            position: fixed;
+            width: 22vw;
+            height: 37vh;
+            top: 10vh;
+            display: block;
+            right: -1vw;
+            background: url("./images/home/SOS1.PNG");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            transition: background 0.3s ease;
+            z-index: 9;
+        }
+        #phone:hover {
+            background: url("./images/home/SOS2.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        #aboutus {
+            position: fixed;
+            width: 18vw;
+            height: 28vh;
+            bottom: 2vh;
+            right: 38vw;
+            background: url("./images/home/About\ us1.PNG");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            /* transition: background 0.3s ease; */
+            z-index: 9;
+        }
+        #aboutus:hover {
+            background: url("./images/home/About\ us2.PNG");
+            width: 18vw;
+            height: 28vh;
+            bottom: 2vh;
+            right: 38vw;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+      #back {
+      position: fixed;
+      width: 12vw; 
+      height: 12vh;
+      top: 30px;
+      background: url("./images/sos/elements/Back\ pink1.PNG");
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: background 0.3s ease;
+    }
+    #back:hover {
+      position: fixed;
+      width: 12vw; 
+      height: 12vh;
+      background: url("./images/sos/elements/Back\ pink2.PNG");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    #sound {
+    position: fixed;
+    background-image: url("./images/sound/Sound1.PNG");
+    width: 9vw;
+    height: 9vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 120px;
+    right: 5px;
+
+        }
+    }
+
+        @media (width: 1280px) {
             body {
             background-image: url(./images/home/Bg3.PNG);
             background-position: center center;
@@ -804,12 +976,6 @@
            
             overflow: hidden;
         }
-    /* body {
-            background-image: url(./images/home/Bg3.PNG);
-            background-position: center center;
-            height: 100vh;
-            overflow: hidden;
-        } */
         #home{
             display: none;
         }

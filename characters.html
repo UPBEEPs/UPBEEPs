@@ -43,16 +43,64 @@
       background-size: contain;
       background-repeat: no-repeat;
     }
-    
     @media (width: 1024px) {
+          .character {
+      width: 110%;
+      height: auto;
+    }
+    .character:hover{
+      transform: scale(1.1);
+    }
+    #ch{
+        position: absolute;
+        bottom: 25vh;
+        left: 8vw; 
+      }
+      #choose{
+        position: fixed;
+        top:  23vh;
+        left: -19vw;
+        width: 1500px;
+        height: 100px;
+      }
+    #sound {
+    position: absolute;
+    background-image: url("./images/sound/Sound1.PNG");
+    width: 7vw;
+    height: 10vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 21.7vh;
+    left: 10vw;
+}
+#back {
+      position: fixed;
+      width: 12vw; 
+      height: 12vh;
+      top: 3vh;
+      background: url("./images/sos/elements/Back\ pink1.PNG");
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: background 0.3s ease;
+    }
+    #back:hover {
+      position: fixed;
+      top: 3vh;
+      width: 12vw; 
+      height: 12vh;
+      background: url("./images/sos/elements/Back\ pink2.PNG");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+}
+    
+    /* @media (width: 1024px) {
       #ch{
         position: fixed;
         top:  40vh;
         bottom: 40vh;
         width: 1000px;
-        /* right: 0.006vw; */
         height: 350px;
-        /* justify-content: center; */
       }
       #choose{
         position: fixed;
@@ -132,7 +180,7 @@
 
 
 }
-        }
+        } */
 
         @media (width: 1280px) {
           .character {

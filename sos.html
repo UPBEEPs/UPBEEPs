@@ -416,7 +416,75 @@
         }
 }
 
-@media (width: 1024px) {
+@media (max-width: 1024px) {
+    #credit{
+        position: relative;
+        width: 1.5vw;
+        height: 1.5vh;
+        right: 2vw;
+    }
+    body {
+            background-image: url('./images/sos/elements/Shelf+bg.png');
+            background-size: contain; 
+            background-position: center center; 
+            overflow: hidden;
+        }
+    #shelf1{
+        position: absolute;
+        right: 180px;
+        top: 26.5vh;
+    }
+
+    #shelf2{
+        position: absolute;
+        right: 180px;
+        bottom: 31vh;
+    }
+    .shelf-image {
+        width: 160px;
+        margin: 30px;
+    transition: transform 0.3s ease;
+}
+.shelf-image:hover {
+    transform: scale(1.05);
+}
+    #sound {
+    position: fixed;
+    background-image: url("./images/sound/Sound1.PNG");
+    width: 10vw;
+    height: 10vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 20vh;
+    left: 1.5vw;
+}
+#home {
+            position: absolute;
+            width: 12vw; 
+            height: 12vh;
+            right: -0.5vw;
+            bottom: 20vh;
+            background: url("./images/sos/elements/Home1.PNG");
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: background 0.3s ease;
+            z-index: 9;
+        }
+
+        #home:hover {
+            position: absolute;
+            width: 14vw; 
+            height: 14vh;
+            right: -0.5vw;
+            bottom: 20vh;
+            background: url("./images/sos/elements/Home2.PNG");
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 9;
+        }
+}
+
+/* @media (width: 1024px) {
     #shelf1{
         position: fixed;
         top: 27vh;
@@ -482,7 +550,7 @@
             background-repeat: no-repeat;
             background-position: center center;
         }
-}
+} */
     </style>
 </head>
 <body>
@@ -543,48 +611,6 @@
         </div>
     </section>
     <script src="./js/audio.js"></script>
-    <!-- <script>
-const audiobtn = document.getElementById('sound');
-const audioElement = new Audio('./audio/SoundUpbeep.mp3');
-
-let isPlaying = localStorage.getItem('isPlaying') === 'true';
-audiobtn.style.backgroundImage = isPlaying ? 'url("./images/sound/Sound2.PNG")' : 'url("./images/sound/Sound1.PNG")';
-function toggleAudio() {
-    if (isPlaying) {
-        audioElement.pause();
-        isPlaying = false;
-    } else {
-        audioElement.play();
-        isPlaying = true;
-    }
-    localStorage.setItem('isPlaying', isPlaying);
-    audiobtn.style.backgroundImage = isPlaying ? 'url("./images/sound/Sound2.PNG")' : 'url("./images/sound/Sound1.PNG")';
-}
-audiobtn.addEventListener('click', toggleAudio);
-</script> -->
-<!-- <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const audiobtn = document.getElementById('sound');
-        const audioElement = new Audio('./audio/SoundUpbeep.mp3');
-    
-        let isPlaying = localStorage.getItem('isPlaying') === 'true';
-        audiobtn.style.backgroundImage = isPlaying ? 'url("./images/sound/Sound2.PNG")' : 'url("./images/sound/Sound1.PNG")';
-    
-        function toggleAudio() {
-            if (isPlaying) {
-                audioElement.pause();
-                isPlaying = false;
-            } else {
-                audioElement.play();
-                isPlaying = true;
-            }
-            localStorage.setItem('isPlaying', isPlaying);
-            audiobtn.style.backgroundImage = isPlaying ? 'url("./images/sound/Sound2.PNG")' : 'url("./images/sound/Sound1.PNG")';
-        }
-    
-        audiobtn.addEventListener('click', toggleAudio);
-    });
-    </script> -->
     
     
 </body>
