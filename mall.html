@@ -343,9 +343,263 @@ top: 120px;
 		grid-auto-columns: 100%;
 	}
 }
-@media screen and (max-width: 1470px) {
+
+@media screen and (width: 1024px) {
     #pd{
-       padding-top: 7vh;
+       padding-top: 2vh;
+    }
+    .acc-name{
+        font-size: 25px;
+    }
+    #halter{
+        padding-left: 32px;
+    }
+    #headLine {
+    background-image: url('./images/mall/elements/Head\ line.PNG');
+    background-position: center center; 
+    position: absolute;
+    background-repeat: repeat-x;
+    width: 150vw ;
+    height: 3.7vh;
+    right: 0.00vw;
+    top: 5.4vh;
+    object-fit: contain;
+    
+}
+    #allNext,#allBack{
+        position: relative;
+        top: -8vh;
+        width: 5vw;
+        height: 4vh;
+    }
+
+    #reviewNext,#reviewBack{
+        width: 5vw;
+        height: 4vh;
+        margin-top: 0vh;
+    }
+    #reviewBack{
+        position: relative;
+        right: -0.5vw;
+        
+    }
+    #reviewNext{
+        position: relative;
+        left: -0.5vw; 
+    }
+    #product2{
+    font-size: 50px;
+    margin-left: 230px;
+}
+    #searchResults {
+            position: absolute;
+            top: 100%;
+            right: 70px;
+            max-height: 250px; /* กำหนดความสูงสูงสุด */
+            overflow-y: auto; /* ให้มีการเลื่อนแนวตั้งเมื่อเกินความสูงสูงสุด */
+            border: 1px solid #ccc;
+            background-color: #fff;
+            padding: 10px;
+            z-index: 1000; 
+            display: none;
+            margin-top: 5px;
+        }
+    .arrow .carousel {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: calc((100% / 4));
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	/* gap: 30px; */
+	border-radius: 8px;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+}
+    .card .img img {
+	width: 259.5px;
+	height: 255.73px;
+	object-fit: contain;
+
+}
+    #Headline{
+    position: absolute;
+    left: 60px;}
+    
+
+    .btn-large {
+            position: absolute;
+            padding: 11px 45px;
+            font-size: 18px;
+            right: 260px;
+        }
+    .productImg {
+            /* padding: 100px;  */
+            object-fit: contain; 
+            width: 70vw;
+            display: flex;
+            margin-top: 1vh;
+            justify-content: center;
+            /* height: 550px; */
+           
+        }
+    #burger{
+        width: 50px;
+    }
+    .arrow {
+	max-width: 2000px;
+	width: 80vw;
+	position: relative;
+    margin-right: 4.5vw;
+}
+h1{
+    font-size: 35px;
+    text-shadow: 2px 2px 2px #ffffff;
+}
+#promotion {
+    background-image: url('./images/mall/products/longImgs/หน้าปก.PNG');
+    background-size: cover; 
+    position: relative;
+    top: 8.2vh;
+   width: 1024px;
+   height: 41vh;
+    background-position: center center; 
+}
+#all,#top,#skirt,#dress,#acc, #set{
+   margin-top: 80px;
+}
+#search{
+    width: 25px;
+    height: 25px;
+}
+.nav-link{
+    font-size: 19px;
+    padding-left: 12px;
+}
+.arrow i{
+    font-size: 20px;
+}
+#Search{
+    width: 200px ;
+    height: 35px;
+}
+#btSeacrh{
+    width: 25px;
+    height: 25px;
+}
+.gift {
+    width: 280px;
+    position: relative;
+    left: -25vw;
+    top: 15vh;
+}
+.close {
+    font-size: 38px;
+    margin-left: 1.5vw;
+    color: rgb(221, 11, 11);
+    opacity: 1;
+}
+#clickHere{
+    position: absolute;
+    bottom: 38px;
+    left: 3vw;
+    font-size: 18px;
+    color:#ffffff;
+    text-shadow: 2px 5px 2px #000000;
+
+}
+.clickImg{
+    position: relative;
+    object-fit: contain;
+    top: 0vh;
+}
+#underHead{
+    position: relative;
+    margin-top: 6vh;
+}
+.detail-all{
+    position: relative;
+    top: 10px;
+	font-size: 30px;
+    text-shadow: 2px 2px 2px #ffffff;
+    color: #000000;
+    font-weight: 500px;
+    padding-left: 15px;
+}
+.detail-all2{
+    position: relative;
+    top: 30px;
+	font-size: 52px;
+    text-shadow: 2px 2px 2px #ffffff;
+    color: #000000;
+    padding-bottom: 10px;
+}
+.carousel-inner {
+            height: 100%;
+        }
+        .carousel-caption {
+            width: 100%;
+            /* padding-bottom: 1000px; */
+        }
+    #Btcarousel1{
+        position: absolute;
+        top: 360px;
+        left: -20px;
+        opacity: 1;
+    }
+    #Btcarousel2{
+        position: absolute;
+        top: 360px;
+        right: -20px;
+        opacity: 1;
+
+    }
+    #carouselprev{
+        position: absolute;
+        width: 5.5vw;
+        height: 5vh;
+        top: -3.5vh;
+        left: -3vw;
+
+    }
+    #carouselnext{
+        position: absolute;
+        top: -3.5vh;
+        width: 5.5vw;
+        height: 5vh;
+        right: -2.5vw;
+    }
+    h1{
+    font-size: 38px;
+    }
+    .owl-nav .owl-prev {
+        top: 190px;
+        left: -80px;
+    
+}
+
+.owl-nav .owl-next  {
+    top: 190px;
+  right: -80px;
+
+}
+
+#line1{
+    position: absolute;
+    object-fit: cover;
+    width:70.8vw;
+    top: 70px;
+    left: 9.5vw;
+
+}
+#product1{
+    margin-left: 8.5vw;
+}
+}
+
+
+@media screen and (width: 1470px) {
+    #pd{
+       padding-top: 2vh;
     }
     .acc-name{
         font-size: 25px;
@@ -368,8 +622,8 @@ top: 120px;
     #allNext,#allBack{
         position: relative;
         top: -8vh;
-        width: 3vw;
-        height: 5vh;
+        width: 4vw;
+        height: 7vh;
         /* margin-top: -5vh; */
     }
 
@@ -435,7 +689,10 @@ top: 120px;
     .productImg {
             /* padding: 100px;  */
             object-fit: contain; 
-            width: 800px;
+            width: 70vw;
+            display: flex;
+            margin-top: 1vh;
+            justify-content: center;
             /* height: 550px; */
            
         }
@@ -453,10 +710,12 @@ h1{
     text-shadow: 2px 2px 2px #ffffff;
 }
 #promotion {
-    background-image: url('./images/mall/promotion.jpg');
+    background-image: url('./images/mall/products/longImgs/หน้าปก.PNG');
     background-size: cover; 
-    height: 600px;
-    margin-top: 80px;
+    position: relative;
+    top: 14.5vh;
+    height: 785px;
+    background-position: center center; 
 }
 #all,#top,#skirt,#dress,#acc, #set{
    margin-top: 80px;
@@ -481,11 +740,34 @@ h1{
     height: 25px;
 }
 .gift {
-    width: 400px;
-    height: 320px;
+    width: 280px;
+    position: relative;
+    left: -35vw;
+    top: 30vh;
+}
+.close {
+    font-size: 35px;
+    margin-left: 1.5vw;
+    color: rgb(221, 11, 11);
+    opacity: 1;
+}
+#clickHere{
     position: absolute;
-    left: 160px;
-    top: 430px;
+    bottom: 38px;
+    left: 3.5vw;
+    font-size: 15px;
+    color:#ffffff;
+    text-shadow: 2px 5px 2px #000000;
+
+}
+.clickImg{
+    position: relative;
+    object-fit: contain;
+    top: 0vh;
+}
+#underHead{
+    position: relative;
+    margin-top: 14vh;
 }
 .detail-all{
     position: relative;
@@ -498,11 +780,11 @@ h1{
 }
 .detail-all2{
     position: relative;
-    top: 12px;
+    top: 30px;
 	font-size: 52px;
     text-shadow: 2px 2px 2px #ffffff;
     color: #000000;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 .carousel-inner {
             height: 100%;
@@ -515,21 +797,29 @@ h1{
         position: absolute;
         top: 360px;
         left: -20px;
+        opacity: 1;
     }
     #Btcarousel2{
         position: absolute;
         top: 360px;
         right: -20px;
+        opacity: 1;
 
     }
     #carouselprev{
-        width: 50px;
-        height: 50px;
+        position: absolute;
+        width: 4vw;
+        height: 7vh;
+        top: 2vh;
+        left: -2vw;
 
     }
     #carouselnext{
-        width: 50px;
-        height: 50px;
+        position: absolute;
+        top: 1.95vh;
+        width: 4vw;
+        height: 7vh;
+        right: -2vw;
     }
     h1{
     font-size: 45px;
@@ -548,20 +838,20 @@ h1{
 
 #line1{
     position: absolute;
-    object-fit: contain;
-    width: 814px;
+    object-fit: cover;
+    width:70.8vw;
     top: 70px;
-    left: 18.8vw;
+    left: 11vw;
 
 }
 #product1{
-    margin-left: 18vw;
+    margin-left: 10.5vw;
 }
 }
 
 @media screen and (width: 1680px) {
     #pd{
-       padding-top: 7vh;
+       padding-top: 3vh;
     }
     .acc-name{
        font-size:  27px;
@@ -584,8 +874,8 @@ h1{
     #allNext,#allBack{
         position: relative;
         top: -8vh;
-        width: 3vw;
-        height: 5vh;
+        width: 4vw;
+        height: 8vh;
         /* margin-top: -5vh; */
     }
 
@@ -652,7 +942,7 @@ h1{
             /* padding: 100px;  */
             object-fit: cover; 
             width: 1090px;
-            height: 550px;
+            height: 600px;
             margin-top: 20px;
         }
     #burger{
@@ -670,9 +960,13 @@ h1{
 }
 #promotion {
     background-image: url('./images/mall/products/longImgs/หน้าปก.PNG');
-    background-size: contain; 
-    height: 600px;
-    margin-top: 80px;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: center center; 
+    height: 110vh;
+    position: relative;
+    top: 16vh;
+    
 }
 #all,#top,#skirt,#dress,#acc, #set{
    margin-top: 80px;
@@ -696,12 +990,42 @@ h1{
     width: 25px;
     height: 25px;
 }
+/* .gift {
+    width: 280px;
+    position: relative;
+    left: -35vw;
+    top: 30vh;
+} */
+.close {
+    font-size: 60px;
+    margin-left: 1.5vw;
+    color: rgb(221, 11, 11);
+    opacity: 1;
+}
+#clickHere{
+    position: absolute;
+    bottom: 38px;
+    left: 5vw;
+    font-size: 20px;
+    color:#ffffff;
+    text-shadow: 2px 5px 2px #000000;
+
+}
+.clickImg{
+    position: relative;
+    object-fit: contain;
+    top: 0vh;
+}
+#underHead{
+    position: relative;
+    margin-top: 15vh;
+}
 .gift {
     width: 400px;
     height: 320px;
     position: absolute;
-    left: 160px;
-    top: 430px;
+    left: 10vw;
+    top: 30vh;
 }
 .detail-all{
     position: relative;
@@ -714,11 +1038,11 @@ h1{
 }
 .detail-all2{
     position: relative;
-    top: 12px;
+    top: 4vh;
 	font-size: 52px;
     text-shadow: 2px 2px 2px #ffffff;
     color: #000000;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
 }
 .carousel-inner {
             height: 100%;
@@ -730,23 +1054,26 @@ h1{
     #Btcarousel1{
         position: absolute;
         top: 360px;
-        left: -20px;
+        left: -4vw;
+        opacity: 1;
     }
     #Btcarousel2{
         position: absolute;
         top: 360px;
-        right: -20px;
+        right: -4vw;
+        opacity: 1;
 
     }
     #carouselprev{
-        width: 50px;
-        height: 50px;
+        width: 4vw;
+        height: 9vh;
 
     }
     #carouselnext{
-        width: 50px;
-        height: 50px;
+        width: 4vw;
+        height: 9vh;
     }
+
     h1{
     font-size: 45px;
     }
@@ -773,6 +1100,7 @@ h1{
 #product1{
     margin-left: 230px;
 }
+    
 
 }
 
@@ -1114,10 +1442,9 @@ h1{
             right: 450px;
         }
     .productImg {
-            object-fit: cover; 
-            width: 80vw;
-            background-position: center center; 
-            /* height: 100vh; */
+            object-fit: contain; 
+            width: 75vw;
+            /* height: 40vh; */
         }
     #burger{
         width: 2.5vw;
@@ -1130,18 +1457,22 @@ h1{
     top: 20vh;
 }
   
-#promotion{
+/* #promotion{
+    background-image: url('./images/mall/promotion.jpg');
+    background-size: cover;
+    margin-top: 190px;
+    height: 750px;
+} */
+h1{
+    font-size: 153px;
+}
+#promotion {
     background-image: url('./images/mall/products/longImgs/หน้าปก.PNG');
     background-size: cover;
     position: relative;
     top: 9.6vh;
     height: 97vh;
-    background-position: center center; 
 }
-h1{
-    font-size: 153px;
-}
-
 #all,#top,#skirt,#dress,#acc, #set{
    margin-top: 90px;
 }
@@ -1221,22 +1552,22 @@ h1{
     top: 7vh;
     
 }
+
+.gift {
+    width: 22vw;
+    height: 33vh;
+    position: absolute;
+    left: 8vw;
+    top: 55vh;
+}
 .close {
     font-size: 150px;
     color: rgb(221, 11, 11);
     opacity: 1;
 }
-.gift {
-    width: 22vw;
-    height: 33vh;
-    position: absolute;
-    left: 6vw;
-    top: 50vh;
-}
 #clickHere{
     position: absolute;
-    bottom: 220px;
-    left: 130px;
+    bottom: 40px;
     font-size: 62px;
     color:#ffffff;
     text-shadow: 2px 5px 2px #000000;
@@ -1245,33 +1576,35 @@ h1{
 .clickImg{
     position: relative;
     object-fit: contain;
-    top: -75px;
+    top: -10px;
     /* width: 20vw; */
-    height: 45vh;
-}
-#textAll{
-    font-size: 45px;
+    height: 35vh;
 }
 #underHead{
     position: relative;
     margin-top: 300px;
 }
+#textAll{
+    font-size: 45px;
+}
+
 .carousel-indicators li {
     position: relative;
     border-radius: 100px;
-    width: 1vw;
-    height: 1vh;
-    bottom: 15vh;
+    width: 42px;
+    height: 42px;
+    bottom: 5vh;
     margin: 20px;
 }
 .carousel-indicators .active {
-    width: 1vw;
-    height: 1vh;
+    position: relative;
+    border-radius: 100px;
+    width: 42px;
+    height: 42px;
+    bottom: 5vh;
+    margin: 20px;
 }
 }
-
-
-        
 
  /* all */
     </style>
@@ -1393,7 +1726,7 @@ h1{
 <section class="contain bg-mall mt-5">
     <div class="row d-flex justify-content-center" id="underHead">
       <div class="col-md-9 pt-5">
-          <div class="row g-0  rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="row g-0 d-flex justify-content-center  rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div id="myCarousel" class="carousel slide">
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
@@ -1403,10 +1736,9 @@ h1{
                       <li data-target="#myCarousel" data-slide-to="3"></li>
                       <li data-target="#myCarousel" data-slide-to="4"></li>
                       <li data-target="#myCarousel" data-slide-to="5"></li>
-                      <li data-target="#myCarousel" data-slide-to="6"></li>
                   </ol>
                   <!-- Wrapper for Slides -->
-                  <div class="carousel-inner">
+                  <div class="carousel-inner d-flex justify-content-center">
                     <div class="card item active" id="p1">
                         <div class="row">
                             <div class="detail-all2 animated fadeInUp">Dream Jeans Set</div>
@@ -1416,6 +1748,7 @@ h1{
                         </div>
                     </div>
 
+
                       <div class="card item" id="p2">
                         <div class="row">
                             <div class="detail-all2 animated fadeInDown">Butterfly Set</div>
@@ -1423,23 +1756,11 @@ h1{
                         <div class="productImg">
                             <img src="./images/mall/products/longImgs/ปก2.PNG" class="w-100">
                         </div>
-                        <!-- <div class="carousel-caption">
-                            <p class="animated fadeInUp"><a href="#" class="btn btn-transparent btn-rounded btn-large">Learn More</a></p>
-                        </div> -->
                     </div>
-
-                      <!-- <div class="item ">
-                          <div class="fill"><img src="./images/mall/product/Butterfly top 01(1).PNG" class="d-block w-50" alt="..."></div>
-                          <div class="carousel-caption">
-                              <h2 class="animated fadeInDown name">Butterfly Top 002</h2>
-                              <p class="animated fadeInUp"><a href="#" class="btn btn-transparent btn-rounded btn-large">Learn More</a></p>
-                          </div>
-                      </div> -->
 
                     <div class="card item" id="p3">
                         <div class="row">
-                            <div class="detail-all2 animated fadeInRight">Butterfly Top</div>
-                            
+                            <div class="detail-all2 animated fadeInRight">Butterfly Top</div>   
                         </div>
                         <div class="productImg">
                             <img src="./images/mall/products/longImgs/ปก3.PNG" class="w-100">
@@ -1454,6 +1775,7 @@ h1{
                             <img src="./images/mall/products/longImgs/ปก4.PNG" class="w-100">
                         </div>
                     </div>
+
                     <div class="card item" id="p3">
                         <div class="row">
                             <div class="detail-all2 animated fadeInDown">UPBEEP's Baby Tee Shirt & Dream Jeans Skirt</div>
@@ -1462,6 +1784,7 @@ h1{
                             <img src="./images/mall/products/longImgs/ปก5.PNG" class="w-100">
                         </div>
                     </div>
+
                     <div class="card item" id="p3">
                         <div class="row">
                             <div class="detail-all2 animated fadeInUp">Bowbeep! </div>
