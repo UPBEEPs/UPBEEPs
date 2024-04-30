@@ -72,22 +72,22 @@
                         originalHeight: 0,
                         originaly: 0,
                         originalX: 0,
-                        minWidth: 350,
-                        minHeight: 350,
+                        minWidth: 100,
+                        minHeight: 100,
                         maxWidth: 1000,
                         maxHeight: 1000
                     };
-            
+
                     /**
                      * Zoom controls
                      */
                     self.zoom = $(cssSelector + ' .zoom');
-            
+
                     /**
                      * Call the constructor
                      */
                     init(cssSelector, imageFilePath, options);
-            
+
                     /**
                      * Return public methods
                      */
@@ -120,18 +120,18 @@
                          * Merge the defaults with the user options
                          */
                         self.options = $.extend({}, self.defaults, options);
-            
+
                         /**
                          * Enable/disable the image helper
                          */
                         if (self.options.imageHelper) {
                             registerImageHelper();
                         }
-            
+
                         registerDropZoneEvents();
                         registerImageDragEvents();
                         registerZoomEvents();
-            
+
                         /**
                          * Start
                          */
@@ -141,14 +141,14 @@
                             self.photoArea.addClass('photo--empty');
                         }
                     }
-            
+
                     /**
                      * Check if the user's device is a smartphone/tablet
                      */
                     function isMobile() {
                         return navigator.userAgent.match(/BlackBerry|Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i);
                     }
-            
+
                     /**
                      * Return the model
                      */
@@ -170,7 +170,7 @@
                             return !!s.match(isDataURL.regex);
                         }
                         isDataURL.regex = /^\s*data:([a-z]+\/[a-z]+(;[a-z\-]+\=[a-z\-]+)?)?(;base64)?,[a-z0-9\!\$\&\'\,\(\)\*\+\,\;\=\-\.\_\~\:\@\/\?\%\s]*\s*$/i;
-            
+
                         var image = new Image();
                         if (!isDataURL(imageUrl)) {
                             image.crossOrigin = 'anonymous';
@@ -180,30 +180,37 @@
                             var ratio,
                                 newH, newW,
                                 w = this.width, h = this.height;
-            
+
                             if (w < self.options.image.minWidth ||
                                 h < self.options.image.minHeight) {
                                 self.photoArea.addClass('photo--error--image-size photo--empty');
                                 setModel({});
-            
+
                                 /**
                                  * Call the onError callback
                                  */
                                 if (typeof self.options.onError === 'function') {
                                     self.options.onError('image-size');
+                                    //auto resize image
+                                    // var canvas = document.createElement('canvas');
+                                    // var ctx = canvas.getContext('2d');
+                                    // canvas.width = self.options.image.minWidth;
+                                    // canvas.height = self.options.image.minHeight;
+                                    // ctx.drawImage(image, 0, 0, self.options.image.minWidth, self.options.image.minHeight);
+                                    // image.src = canvas.toDataURL();
                                 }
-            
+
                                 self.photoArea.removeClass('photo--loading');
                                 return;
                             } else {
                                 self.photoArea.removeClass('photo--error--image-size');
                             }
-            
+
                             self.photoArea.removeClass('photo--empty photo--error--file-type photo--loading');
-            
+
                             var frameRatio = self.options.image.maxHeight / self.options.image.maxWidth;
                             var imageRatio = self.model.height / self.model.width;
-            
+
                             if (frameRatio > imageRatio) {
                                 newH = self.options.image.maxHeight;
                                 ratio = (newH / h);
@@ -215,7 +222,7 @@
                             }
                             h = newH;
                             w = newW;
-            
+
                             self.model.imageSrc = image;
                             self.model.originalHeight = h;
                             self.model.originalWidth = w;
@@ -228,16 +235,16 @@
                             self.photoOptions.removeClass('hide');
                             fitToFrame();
                             render();
-            
+
                             /**
                              * Call the onLoad callback
                              */
                             if (typeof self.options.onLoad === 'function') {
                                 self.options.onLoad(self.model);
                             }
-            
+
                         };
-            
+
                         image.src = imageUrl;
                     }
                     /**
@@ -250,7 +257,7 @@
                         self.imageHelperCanvasContext.clearRect(0, 0, self.imageHelperCanvas.width,self.imageHelperCanvas.height);
                         self.imageHelperCanvasContext.save();
                         setModel({});
-            
+
                         /**
                          * Call the onRemove callback
                          */
@@ -258,9 +265,9 @@
                             self.options.onRemove(self.model);
                         }
                     }
-            
+
                     /**
-                     * Register the file drop zone events 
+                     * Register the file drop zone events
                      */
                     function registerDropZoneEvents() {
                         var target = null;
@@ -272,7 +279,7 @@
                             e.stopPropagation();
                             e.originalEvent.dataTransfer.dropEffect = 'copy';
                         });
-            
+
                         /**
                          * Register the events when the file is out or dropped on the dropzone
                          */
@@ -303,7 +310,7 @@
                          */
                         self.element.on('click', '.photo--empty .photo__frame', function (e) {
                             $(cssSelector + ' input[type=file]').trigger('click');
-            
+
                         });
                         /**
                          * Register the remove action to the remove button.
@@ -317,8 +324,8 @@
                         self.element.on('drop', function (e) {
                             readFile(e.originalEvent.dataTransfer.files[0]);
                         });
-            
-            
+
+
                         /**
                          * Only into the DropZone scope.
                          * Read a file using the FileReader API.
@@ -339,7 +346,7 @@
                                 }
                                 return;
                             }
-            
+
                             var reader;
                             reader = new FileReader();
                             reader.onloadstart = function () {
@@ -376,7 +383,7 @@
                         } else {
                             self.photoFrame.on("mousedown touchstart", dragStart);
                         }
-                        
+
                         /**
                          * Stop dragging
                          */
@@ -401,7 +408,7 @@
                          * Drag the image inside the container
                          */
                         $(window).on("mousemove touchmove", function (e) {
-            
+
                             if ($dragging) {
                                 e.preventDefault();
                                 var refresh = false;
@@ -411,7 +418,7 @@
                                     clientX = e.touches[0].clientX
                                     clientY = e.touches[0].clientY
                                 }
-            
+
                                 var dy = (clientY) - y;
                                 var dx = (clientX) - x;
                                 dx = Math.min(dx, 0);
@@ -432,7 +439,7 @@
                                 }
                             };
                         });
-            
+
                         function dragStart(e) {
                             $dragging = true;
                             clientX = e.clientX;
@@ -449,14 +456,14 @@
                      * Register the zoom control events
                      */
                     function registerZoomEvents() {
-            
+
                         self.zoomControl
                             .attr('min', self.options.zoom.minValue)
                             .attr('max', self.options.zoom.maxValue)
                             .attr('step', self.options.zoom.step)
                             .val(self.options.zoom.initialValue)
                             .on('input', zoomChange);
-            
+
                         function zoomChange(e) {
                             self.model.zoom = Number(this.value);
                             updateZoomIndicator();
@@ -479,7 +486,7 @@
                         y = self.model.y - y;
                         x = Math.min(x, 0);
                         y = Math.min(y, 0);
-            
+
                         if (self.model.width + (x) < self.model.cropWidth) {
                             /**
                              * Calculates to handle the empty space on the right side
@@ -499,21 +506,21 @@
                      * Calculates the new image's position based in its new size
                      */
                     function getPosition(newWidth, newHeight) {
-            
+
                         var deltaY = (self.model.y - (self.model.cropHeight / 2)) / self.model.height;
                         var deltaX = (self.model.x - (self.model.cropWidth / 2)) / self.model.width;
                         var y = (deltaY * newHeight + (self.model.cropHeight / 2));
                         var x = (deltaX * newWidth + (self.model.cropWidth / 2));
-            
+
                         x = Math.min(x, 0);
                         y = Math.min(y, 0);
-            
+
                         if (newWidth + (x) < self.model.cropWidth) {
                             /**
                              * Calculates to handle the empty space on the right side
                              */
                             x = Math.abs((newWidth - self.model.cropWidth)) * -1;
-            
+
                         }
                         if (newHeight + (y) < self.model.cropHeight) {
                             /**
@@ -532,9 +539,9 @@
                          */
                         var newWidth = self.model.originalWidth * self.model.zoom;
                         var newHeight = self.model.originalHeight * self.model.zoom;
-            
+
                         var position = getPosition(newWidth, newHeight);
-            
+
                         /**
                          * Set the model
                          */
@@ -544,7 +551,7 @@
                         self.model.y = position.y;
                         updateZoomIndicator();
                         render();
-            
+
                         /**
                          * Call the onImageSizeChange callback
                          */
@@ -552,7 +559,7 @@
                             self.options.onImageSizeChange(self.model);
                         }
                     }
-            
+
                     /**
                      * Updates the icon state from the slider
                      */
@@ -571,16 +578,16 @@
                             self.zoomControl.removeClass('zoom--maxValue');
                         }
                     }
-            
+
                     /**
                      * Resize and position the image to fit into the frame
                      */
                     function fitToFrame() {
                         var newHeight, newWidth, scaleRatio;
-            
+
                         var frameRatio = self.model.cropHeight / self.model.cropWidth;
                         var imageRatio = self.model.height / self.model.width;
-            
+
                         if (frameRatio > imageRatio) {
                             newHeight = self.model.cropHeight;
                             scaleRatio = (newHeight / self.model.height);
@@ -591,12 +598,12 @@
                             newHeight = parseFloat(self.model.height) * scaleRatio;
                         }
                         self.model.zoom = scaleRatio;
-            
+
                         self.zoomControl
                             .attr('min', scaleRatio)
                             .attr('max', self.options.zoom.maxValue - scaleRatio)
                             .val(scaleRatio);
-            
+
                         self.model.height = newHeight;
                         self.model.width = newWidth;
                         updateZoomIndicator();
@@ -611,7 +618,7 @@
                         self.canvasContext.globalCompositeOperation = "destination-over";
                         self.canvasContext.drawImage(self.model.imageSrc, self.model.x, self.model.y, self.model.width, self.model.height);
                         self.canvasContext.restore();
-            
+
                         if (self.options.imageHelper) {
                             updateHelper();
                         }
@@ -622,7 +629,7 @@
                             self.options.onChange(self.model);
                         }
                     }
-            
+
                     /**
                      * Updates the image helper attributes
                      */
@@ -656,9 +663,9 @@
                         canvas.className = "canvas--helper";
                         canvas.width = self.photoHelper.outerWidth();
                         canvas.height = self.photoHelper.outerHeight();
-            
+
                         self.photoHelper.prepend(canvas);
-            
+
                         self.imageHelperCanvas = canvas;
                         self.imageHelperCanvasContext = canvas.getContext('2d');
                         self.imageHelperCanvasContext.mozImageSmoothingEnabled = false;
@@ -674,11 +681,11 @@
                     }
                 }
             })(window, jQuery);
-            
+
             $(function() {
             /**
                  * DEMO
-                 */ 
+                 */
                 var p = new profilePicture('.profile', null,
                     {
                       imageHelper: true,
@@ -689,12 +696,12 @@
                             console.log('Error type: ' + type);
                         }
                     });
-            
-            
+
+
                 $('#previewBtn').on('click', function() {
-                    $('.preview').show().attr('src',p.getAsDataURL());  
+                    $('.preview').show().attr('src',p.getAsDataURL());
                 });
-              
+
               $('#uploadBtn').on('click', function() {
                    $("#uploadExample").show();
                 });
