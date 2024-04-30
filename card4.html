@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="./images/icon logo2.PNG" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+	<title>Card ID</title>
+</head>
+<style>
+	body {
+		background-image: url('./images/card/card4/BG_new.PNG');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+	}
+
+	#home {
+		position: fixed;
+		width: 25vw;
+		height: 16vh;
+		bottom: 6vh;
+		display: block;
+		right: 0vw;
+		background: url("./images/card/card2/Home1.PNG");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		transition: background 0.3s ease;
+
+	}
+
+	#home:hover {
+		position: fixed;
+		width: 25vw;
+		height: 15vh;
+		bottom: 6vh;
+		display: block;
+		right: 0vw;
+		background: url("./images/card/card2/Home2.PNG");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	#info {
+		position: fixed;
+        /* width: 20vw;
+        height: 15vh; */
+        bottom: 9vh;
+        display: block;
+        left: 24vw;
+		font-size: 22pt;
+		font-family: "IBM Plex Sans Thai", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        transition: background 0.3s ease;
+	}
+
+	#card {
+		border-radius: 50px;
+		width: 800px;
+	}
+	.main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.left {
+		flex-basis: 50%;
+		margin-left: 200px;
+		margin-top: 100px;
+	}
+
+	.left .logo{
+		margin-left: 150px;
+		margin-bottom: 50px;
+	}
+
+	.right {
+		flex-basis: 50%;
+	}
+
+	.right #save {
+		position: fixed;
+        width: 400px;
+        height: 120px;
+        display: block;
+		margin-left: 100px;
+		background-image: url('./images/card/card4/Save.PNG');
+		background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        transition: background 0.3s ease;
+	}
+
+	.right #share {
+		position: fixed;
+        width: 370px;
+        height: 120px;
+        display: block;
+		margin-top: 150px;
+		margin-left: 110px;
+		background-image: url('./images/card/card4/Share.PNG');
+		background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        transition: background 0.3s ease;
+	}
+
+	#back {
+        position: fixed;
+        width: 20vw;
+        height: 15vh;
+        bottom: 6vh;
+        display: block;
+        left: 3vw;
+        background: url("./images/card/card2/Back.PNG");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        transition: background 0.3s ease;
+    }
+
+    #back:hover,
+    .next:hover {
+        transform: scale(1.1);
+    }
+
+	@media screen and (max-width: 1600px) {
+		#card {
+			border-radius: 30px;
+			width: 550px;
+		}
+
+		.main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.left {
+			flex-basis: 50%;
+			margin-left: 170px;
+			margin-top: 50px;
+		}
+
+		.left .logo{
+			margin-left: 150px;
+			margin-bottom: 20px;
+		}
+
+		.left .logo img {
+			width: 300px;
+		}
+
+		.right {
+			flex-basis: 50%;
+		}
+
+		.right #save {
+			position: block;
+			width: 350px;
+			height: 120px;
+			display: block;
+			margin-left: 80px;
+			background-image: url('./images/card/card4/Save.PNG');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+			transition: background 0.3s ease;
+		}
+
+		.right #share {
+			position: fixed;
+			width: 330px;
+			height: 120px;
+			display: block;
+			margin-top: 120px;
+			margin-left: 90px;
+			background-image: url('./images/card/card4/Share.PNG');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+			transition: background 0.3s ease;
+		}
+	}
+</style>
+<body>
+	<div class="main">
+		<div class="left">
+			<div class="logo">
+				<img src="./images/card/card4/Finished.PNG">
+			</div>
+			<div class="finished-img">
+				<img src="" id="card">
+			</div>
+		</div>
+		<div class="right">
+			<a id="save" href="#" onclick="saveImg()"></a>
+			<a id="share" href="#" onclick="shareImg()"></a>
+		</div>
+		<a id="home" href="home.html"></a>
+		<span id="info">เล่นเสร็จแล้วอย่าลืม Tag Instagram<br>มาแชร์ความน่ารักที่ @upbeepxstore</span>
+		<a id="back" href="#" onclick="handleBack()"></a>
+	</div>
+
+</body>
+<script>
+	function handleBack() {
+		let url = localStorage.getItem("url");
+		if (url) {
+			window.location.href = url;
+		} else {
+			window.location.href = "card2.html";
+		}
+	}
+	function getCard() {
+		var card = localStorage.getItem("cardImage");
+		document.getElementById("card").src = card;
+	}
+
+	function saveImg() {
+		var card = document.getElementById("card").src;
+		var a = document.createElement('a');
+		a.href = card;
+		a.download = 'card.png';
+		a.click();
+	}
+
+	function shareImg() {
+		var imageData = document.getElementById("card").src;
+		var shareWindow = window.open("", "Share Image", "width=600,height=440");
+		shareWindow.document.write("<img src='" + imageData + "' alt='Shared Image' style='max-width: 590px;'>");
+	}
+
+	getCard();
+</script>
+</html>

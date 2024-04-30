@@ -32,6 +32,10 @@
             background-repeat: no-repeat;
         }
 
+        .card_img{
+            width: 600px;
+        }
+
         #next {
             position: fixed;
             width: 19vw;
@@ -120,7 +124,7 @@
             z-index: 1;
         }
 
-        .input {
+        /* .input {
             position: absolute;
             right: 3vw;
             height: 5vh;
@@ -133,9 +137,9 @@
             font-size: 2em;
             color: #5BFFD8;
             font-family: 'Love Ya Like A Sister', cursive;
-        }
+        } */
 
-        #fname {
+        /* #fname {
             top: 14vh;
         }
 
@@ -159,7 +163,7 @@
         #fstrength {
             top: 41vh;
 
-        }
+        } */
 
         /*DEMO*/
         .preview {
@@ -462,439 +466,216 @@
             transform: scale(1.1);
         }
 
-        @media (width: 2560px) {
-            #fname {
-                top: 15vh;
+    </style>
+    <style>
+        .main{
+		margin: auto;
+		text-align: center;
+	}
+	.cards{
+		width: 1000px;
+		margin: auto;
+		background-image: url('./images/card/card2/Card.PNG');
+        background-size: 1000px;
+		background-repeat: no-repeat;
+	}
+	.cards .input-box{
+		text-align: right;
+		/* padding-top: 155px; */
+		padding-right: 100px;
+		padding-bottom: 110px;
+	}
+	.input {
+		/* height: 55px; */
+		width: 280px;
+		background: transparent;
+		border: none;
+		outline: none;
+		text-align: right;
+		caret-color: #5BFFD8;
+		font-size: 2em;
+		color: #5BFFD8;
+		font-family: 'Love Ya Like A Sister', cursive;
+    }
 
-            }
+	.input1{
+		margin-top: 168px;
+	}
 
-            #fdate {
-                top: 22vh;
-                width: 15.5vw;
+	.input2{
+		margin-top: 28px;
+	}
 
-            }
+	.input3{
+		margin-top: 30px;
+	}
 
-            #fbirth {
-                top: 29vh;
-                width: 15.5vw;
+	.input4{
+		margin-top: 28px;
+	}
 
-            }
+	.input5{
+		margin-top: 25px;
+	}
 
-            #fgoal {
-                top: 35vh;
+    .custom-upload {
+        position: fixed;
+        display: block;
+        margin-top: 190px;
+        margin-left: 112px;
+    }
 
-            }
+    .score-zoom {
+        width: 200px;
+    }
 
-            #fstrength {
-                top: 42vh;
-
-            }
-
+    .upload-img-frame{
+        width: 261px;
+        height: 330px;
+    }
+    .bin {
+            display: inline-block;
+            text-decoration: none;
+            width: 15%;
         }
 
-        @media (width: 1680px) {
-            #next {
-                position: fixed;
-                width: 19vw;
-                height: 13vh;
-                bottom: 6vh;
-                display: block;
-                right: 19vw;
-                margin: 10px;
-                background: url("./images/card/card2/Next.PNG");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-                transition: background 0.3s ease;
-                z-index: 9;
-            }
-
-            #back {
-                position: fixed;
-                width: 20vw;
-                height: 15vh;
-                bottom: 6vh;
-                display: block;
-                left: 18vw;
-                background: url("./images/card/card2/Back.PNG");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-                transition: background 0.3s ease;
-            }
-
-            #back:hover,
-            #next:hover {
-                transform: scale(1.1);
-            }
-
-            #home {
-                position: fixed;
-                width: 25vw;
-                height: 16vh;
-                bottom: 6vh;
-                display: block;
-                right: 0vw;
-                background: url("./images/card/card2/Home1.PNG");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-                transition: background 0.3s ease;
-
-            }
-
-            #home:hover {
-                position: fixed;
-                width: 25vw;
-                height: 15vh;
-                bottom: 6vh;
-                display: block;
-                right: 0vw;
-                background: url("./images/card/card2/Home2.PNG");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-            }
-
-            .contain {
-                /* margin-top: 15vh; */
-                position: absolute;
-                top: 40px;
-            }
-
-            .overlay-image {
-                position: absolute;
-                top: 25%;
-                left: 8.1%;
-                width: 52%;
-                height: 50%;
-                background-image: url('images/card/card2/Frame1.PNG');
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-                z-index: 1;
-            }
-
-            .overlay-text {
-                position: absolute;
-                width: 50vw;
-                height: 50vh;
-                z-index: 1;
-            }
-
-            .input {
-                position: absolute;
-                right: 3vw;
-                height: 5vh;
-                width: 18vw;
-                background: transparent;
-                border: none;
-                outline: none;
-                text-align: right;
-                caret-color: #5BFFD8;
-                font-size: 2em;
-                color: #5BFFD8;
-                font-family: 'Love Ya Like A Sister', cursive;
-            }
-
-            #fname {
-                top: 17vh;
-
-            }
-
-            #fdate {
-                top: 25vh;
-                width: 15.5vw;
-
-            }
-
-            #fbirth {
-                top: 33vh;
-                width: 15.5vw;
-
-            }
-
-            #fgoal {
-                top: 40vh;
-
-            }
-
-            #fstrength {
-                top: 48vh;
-            }
+    @media screen and (max-height: 900px) {
+        .cards{
+            width: 650px;
+            margin: auto;
+            background-image: url('./images/card/card2/Card.PNG');
+            background-size: 650px;
+            background-repeat: no-repeat;
         }
 
-        @media (max-width: 1440px) {
-            #next {
-                position: fixed;
-                width: 19vw;
-                height: 13vh;
-                bottom: 6vh;
-                display: block;
-                right: 19vw;
-                margin: 10px;
-                background: url("./images/card/card2/Next.PNG");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-                transition: background 0.3s ease;
-                z-index: 9;
-            }
-
-            #back {
-                position: fixed;
-                width: 20vw;
-                height: 15vh;
-                bottom: 6vh;
-                display: block;
-                left: 18vw;
-                background: url("./images/card/card2/Back.PNG");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-                transition: background 0.3s ease;
-            }
-
-            #back:hover,
-            #next:hover {
-                transform: scale(1.1);
-            }
-
-            #home {
-                position: fixed;
-                width: 25vw;
-                height: 16vh;
-                bottom: 6vh;
-                display: block;
-                right: 0vw;
-                background: url("./images/card/card2/Home1.PNG");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-                transition: background 0.3s ease;
-
-            }
-
-            #home:hover {
-                position: fixed;
-                width: 25vw;
-                height: 15vh;
-                bottom: 6vh;
-                display: block;
-                right: 0vw;
-                background: url("./images/card/card2/Home2.PNG");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-            }
-
-            .profile {
-                position: absolute;
-                top: 20.2%;
-                left: 26.8%;
-                z-index: 2;
-            }
-
-            .photo__frame {
-                cursor: move;
-                overflow: hidden;
-                position: relative;
-                display: inline-block;
-                width: 180px;
-                height: 230px;
-            }
-
-            .photo__zoom {
-                width: 26%;
-                display: inline-block;
-            }
-
-            .contain {
-                /* margin-top: 15vh; */
-                position: absolute;
-                top: 120px;
-            }
-
-            .overlay-image {
-                position: absolute;
-                top: 25%;
-                left: 8.1%;
-                width: 52%;
-                height: 50%;
-                background-image: url('images/card/card2/Frame1.PNG');
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-                z-index: 1;
-            }
-
-            .overlay-text {
-                position: absolute;
-                width: 50vw;
-                height: 50vh;
-                z-index: 1;
-            }
-
-            .input {
-                position: absolute;
-                right: 3vw;
-                height: 5vh;
-                width: 18vw;
-                background: transparent;
-                border: none;
-                outline: none;
-                text-align: right;
-                caret-color: #5BFFD8;
-                font-size: 2em;
-                color: #5BFFD8;
-                font-family: 'Love Ya Like A Sister', cursive;
-            }
-
-            #fname {
-                top: 12vh;
-            }
-
-            #fdate {
-                top: 19vh;
-                width: 15.5vw;
-            }
-
-            #fbirth {
-                top: 25.5vh;
-                width: 15.5vw;
-            }
-
-            #fgoal {
-                top: 31vh;
-            }
-
-            #fstrength {
-                top: 37vh;
-            }
+        .cards .input-box{
+            text-align: right;
+            /* padding-top: 155px; */
+            padding-right: 60px;
+            padding-bottom: 110px;
+        }
+        .input {
+            /* height: 55px; */
+            width: 280px;
+            background: transparent;
+            border: none;
+            outline: none;
+            text-align: right;
+            caret-color: #5BFFD8;
+            font-size: 16pt;
+            color: #5BFFD8;
+            font-family: 'Love Ya Like A Sister', cursive;
         }
 
-        @media (max-width: 1280px) {
-            .contain {
-                position: absolute;
-                top: 180px;
-            }
-
-            #fname {
-                top: 8.5vh;
-
-            }
-
-            #fdate {
-                top: 14.5vh;
-                width: 15.5vw;
-            }
-
-            #fbirth {
-                top: 19.5vh;
-                width: 15.5vw;
-            }
-
-            #fgoal {
-                top: 23vh;
-
-            }
-
-            #fstrength {
-                top: 27.5vh;
-
-            }
-
-            .profile {
-                position: absolute;
-                top: 29.4%;
-                left: 7.8%;
-                z-index: 2;
-            }
-
-            .photo__frame {
-                cursor: move;
-                overflow: hidden;
-                position: relative;
-                display: inline-block;
-                width: 168px;
-                height: 200px;
-            }
-
-            .photo__zoom {
-                width: 26%;
-                display: inline-block;
-            }
-
-            #back,
-            #next,
-            #home {
-                position: fixed;
-                bottom: 18vh;
-            }
-
-            #home {
-                position: fixed;
-                width: 25vw;
-                height: 16vh;
-                bottom: 6vh;
-                display: block;
-                right: 0vw;
-                background: url("./images/card/card2/Home1.PNG");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-                transition: background 0.3s ease;
-
-            }
-
-            #home:hover {
-                position: fixed;
-                width: 25vw;
-                height: 15vh;
-                bottom: 6vh;
-                display: block;
-                right: 0vw;
-                background: url("./images/card/card2/Home2.PNG");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-            }
+        .input1{
+            margin-top: 110px;
         }
 
-        @media (max-width: 1024px) {
-            .input {
-                font-size: 22px;
-            }
-
-            #fname {
-                top: 13vh;
-            }
-
-            #fdate {
-                top: 20vh;
-                width: 15.5vw;
-            }
-
-            #fbirth {
-                top: 26vh;
-                width: 15.5vw;
-            }
-
-            #fgoal {
-                top: 32.5vh;
-            }
-
-            #fstrength {
-                top: 39.5vh;
-            }
-
-            #back,
-            #next,
-            #home {
-                position: fixed;
-                bottom: 12vh;
-            }
+        .input2{
+            margin-top: 15px;
         }
+
+        .input3{
+            margin-top: 18px;
+        }
+
+        .input4{
+            margin-top: 18px;
+        }
+
+        .input5{
+            margin-top:16px;
+        }
+
+        .custom-upload {
+            position: fixed;
+            display: block;
+            margin-top: 123px;
+            margin-left: 76px;
+        }
+        .score-zoom {
+            width: 120px;
+        }
+        .upload-img-frame{
+            width: 170px;
+            height: 215px;
+        }
+        .bin {
+            display: inline-block;
+            text-decoration: none;
+            width: 40px;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        .cards{
+            width: 400px;
+            margin: auto;
+            background-image: url('./images/card/card2/Card.PNG');
+            background-size: 400px;
+            background-repeat: no-repeat;
+        }
+
+        .cards .input-box{
+            text-align: right;
+            /* padding-top: 155px; */
+            padding-right: 40px;
+            padding-bottom: 110px;
+        }
+        .input {
+            /* height: 55px; */
+            width: 100px;
+            background: transparent;
+            border: none;
+            outline: none;
+            text-align: right;
+            caret-color: #5BFFD8;
+            font-size: 10pt;
+            color: #5BFFD8;
+            font-family: 'Love Ya Like A Sister', cursive;
+        }
+
+        .input1{
+            margin-top: 65px;
+        }
+
+        .input2{
+            margin-top: 5px;
+        }
+
+        .input3{
+            margin-top: 7px;
+        }
+
+        .input4{
+            margin-top: 6px;
+        }
+
+        .input5{
+            margin-top:6px;
+        }
+
+        .custom-upload {
+            position: fixed;
+            display: block;
+            margin-top: 75px;
+            margin-left: 51px;
+        }
+        .score-zoom {
+            width: 100px;
+        }
+        .upload-img-frame{
+            width: 105px;
+            height: 133px;
+        }
+        .bin {
+            display: inline-block;
+            text-decoration: none;
+            width: 35px;
+            margin-top: 3px;
+            margin-left: 70px;
+        }
+    }
     </style>
 </head>
 
@@ -902,40 +683,47 @@
     <div class="row d-flex justify-content-end mt-2 me-3" style="z-index: -100;">
         <img src="./images/home/upbeep2024.PNG" style="width: 13%;">
     </div>
-    <section class="contain mt-4">
-        <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-md-10 d-flex justify-content-center" style="position: relative;">
-                <div class="profile">
-                    <div class="photo">
-                        <input type="file" accept="image/*">
-                        <!-- <div class="photo__helper"> -->
-                        <div class="photo__frame photo__frame--circle">
-                            <canvas class="photo__canvas"></canvas>
-                        </div>
-                        <!-- </div> -->
-                        <div class="photo__options hide">
-                            <div class="photo__zoom">
-                                <input type="range" class="zoom-handler">
+
+    <div class="main">
+		<br>
+		<div class="cards">
+            <section class="custom-upload">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-md-10 d-flex justify-content-center" style="position: relative;">
+                        <div class="profile">
+                            <div class="photo">
+                                <input type="file" accept="image/*">
+                                <!-- <div class="photo__helper"> -->
+                                <div class="photo__frame photo__frame--circle upload-img-frame">
+                                    <canvas class="photo__canvas"></canvas>
+                                </div>
+                                <!-- </div> -->
+                                <div class="photo__options">
+                                    <div class="photo__zoom score-zoom">
+                                        <input type="range" class="zoom-handler">
+                                    </div>
+                                    <!-- ถังขยะ -->
+                                    <a href="javascript:;" class="ps-2 bin">
+                                        <!-- <i class="fa fa-trash"></i> -->
+                                        <img src="./images/card/card3/Trash.PNG" style="width: 100%;">
+                                    </a>
+                                </div>
                             </div>
-                            <!-- ถังขยะ -->
-                            <a href="javascript:;" class="remove ps-2">
-                                <!-- <i class="fa fa-trash"></i> -->
-                                <img src="./images/card/card3/Trash.PNG" style="width: 32%;">
-                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="overlay-text">
-                    <input type="text" class="input" id="fname" name="fname">
-                    <input type="date" class="input" id="fdate" name="fdate">
-                    <input type="date" class="input" id="fbirth" name="fbirth">
-                    <input type="text" class="input" id="fgoal" name="fgoal">
-                    <input type="text" class="input" id="fstrength" name="fstrength">
-                </div>
-                <img src="images/card/card2/Card.PNG" id="card" style="width: 60%; background-size: contain;" />
-            </div>
-        </div>
-    </section>
+            </section>
+			<div class="input-box">
+				<input type="text" class="input input1" name="name" id="name"><br>
+				<input type="date" class='input input2' name="date" id="date"><br>
+				<input type="date" class="input input3" name="birthday" id="birthday"><br>
+				<input type="text" class="input input4" name="dream" id="dream"><br>
+				<input type="text" class="input input5" name="strength" id="strength"><br>
+				<br><br><br>
+			</div>
+
+		</div>
+	</div>
 
     <a id="next" href="#" onclick="showPage2()"></a>
     <a id="home" href="home.html"></a>
@@ -945,11 +733,11 @@
 
     <script>
         function showPage2() {
-            var name = document.getElementById("fname").value;
-            var date = document.getElementById("fdate").value;
-            var birth = document.getElementById("fbirth").value;
-            var goal = document.getElementById("fgoal").value;
-            var strength = document.getElementById("fstrength").value;
+            var name = document.getElementById("name").value;
+            var date = document.getElementById("date").value;
+            var birth = document.getElementById("birthday").value;
+            var goal = document.getElementById("dream").value;
+            var strength = document.getElementById("strength").value;
 
             var canvas = document.querySelector('.photo__canvas');
             var imageData = canvas.toDataURL();
@@ -970,7 +758,9 @@
                 resetInputs(name);
                 return false;
             }
-            var url = "card3.html?" + "name=" + encodeURIComponent(name) + "&date=" + encodeURIComponent(date) + "&birth=" + encodeURIComponent(birth) + "&goal=" + encodeURIComponent(goal) + "&strength=" + encodeURIComponent(strength) + "&imageData=" + encodeURIComponent(imageData);
+            var url = "card3.html?" + "name=" + encodeURIComponent(name) + "&date=" + encodeURIComponent(date) + "&birth=" + encodeURIComponent(birth) + "&goal=" + encodeURIComponent(goal) + "&strength=" + encodeURIComponent(strength);
+            localStorage.setItem("url", url);
+            localStorage.setItem("imageData", imageData);
             window.location.href = url;
         }
 
@@ -979,6 +769,29 @@
                 document.getElementById("fname").value = '';
             }
         }
+
+        function setDate(){
+            date = document.getElementById('date');
+            birthday = document.getElementById('birthday');
+
+            let today = new Date();
+            let dd = today.getDate();
+            let mm = today.getMonth()+1;
+            if (dd < 10) {
+                dd = '0' + dd;
+            }
+            if (mm < 10) {
+                mm = '0' + mm;
+            }
+            let yyyy = today.getFullYear();
+
+            today = yyyy + '-' + mm + '-' + dd;
+
+            date.value = today;
+            birthday.value = today;
+        }
+
+        setDate()
     </script>
 </body>
 
