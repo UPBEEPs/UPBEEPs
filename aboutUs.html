@@ -773,9 +773,9 @@
     z-index: 9;
         }
 }
-    @media (width: 2240px) {
+    @media (max-width: 2240px) {
         #image1{
-        width: 1100px;
+        width: 45vw;
         object-fit: contain;   
     }
     #back {
@@ -800,11 +800,11 @@
     }
     #butterfly{
         position: absolute;
-        width: 25%;
-        height: 25%;
+        width: 20%;
+        height: 20%;
         object-fit: contain;
-        top: 450px;
-        left: 750px;
+        top: 43vh;
+        left: 38vw;
     }
     .btFlip{
             position: absolute;
@@ -813,13 +813,16 @@
         }
         .FlipClick{
             position: absolute;
-            right: 250px;
-            width: 400px;
-            top: 450px;
+            right: 13vw;
+            width: 15vw;
+            top: 20vw;
         }
     #flip {
-      width: 12vw; 
-      height: 12vh;
+        position: relative;
+      width: 13vw; 
+      height: 13vh;
+      right: -3vw;
+      top: -10vh;
       /* margin-left: 100px; */
       background: url("./images/aboutUs/Flip1.PNG");
       background-size: contain;
@@ -827,8 +830,11 @@
       transition: background 0.3s ease;
     }
     #flip:hover {
-      width: 12vw; 
-      height: 12vh;
+        position: relative;
+        right: -3vw;
+      width: 13vw; 
+      height: 13vh;
+      top: -10vh;
       /* margin-left: 100px; */
       background: url("./images/aboutUs/Flip2.PNG");
       background-size: contain;
@@ -842,29 +848,32 @@
     #Btnext{
         position: absolute;
         top: 80vh;
-        right: 30vw;
+        right: 31vw;
+        width: 5vw;
     }
     #Btback{
         position: absolute;
         top: 80vh;
         left: 30vw;
+        width: 5vw;
     }
     #Btclose{
         position: absolute;
         top: 12vh;
         right: 30vw;
+        width: 3vw;
     }
     .contact{
         position: absolute;
-        top: 44.5vh;
-        right: 30vw;
+        top: 46vh;
+        right: 35vw;
     }
     .ct{
-        width: 150px;
+        width: 5vw;
     }
     #page{
         position: absolute;
-        width: 50%;
+        width: 45%;
     }
     #sound {
     position: fixed;
