@@ -333,7 +333,7 @@
         width: 185px;
         height: 228px;
         left: 186px;
-        top: 265px;
+        top: 211px;
       }
 
       .text-left .intext-right{
@@ -480,7 +480,7 @@
         width: 185px;
         height: 228px;
         left: 186px;
-        top: 265px;
+        top: 211px;
       }
 
       .text-left .intext-right{
@@ -676,10 +676,10 @@
       var frameRect = frame.getBoundingClientRect();
 
       let newLeft = uploadedImageRect.left + (uploadedImageRect.width - frameRect.width) / 2;
-      let newTop = uploadedImageRect.top + (uploadedImageRect.height - frameRect.height) / 2;
+      // let newTop = uploadedImageRect.top + (uploadedImageRect.height - frameRect.height) / 2;
 
       frame.style.left = newLeft + 'px';
-      frame.style.top = newTop + 'px';
+      // frame.style.top = newTop + 'px';
 
       //check screen width
       if (window.innerWidth > 1600 && window.innerHeight > 900) {
