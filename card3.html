@@ -632,7 +632,7 @@
         // Add event listener to the button
         downloadBtn.addEventListener("click", function() {
             // Convert to canvas
-            html2canvas(element).then(function(canvas) {
+            html2canvas(element,{backgroundColor:null}).then(function(canvas) {
                 // Convert canvas to image
                 try {
                   localStorage.removeItem('cardImage');
