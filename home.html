@@ -37,7 +37,7 @@
             z-index: -100;    
 
         }
-        #pony{
+        /* #pony{
             background-size: contain; 
             background-repeat: no-repeat;
             width: 37vw;
@@ -48,7 +48,7 @@
             overflow: hidden;
             z-index: -100;  
            
-        }
+        } */
         #upbeep {
             background: url(./images/home/Upbeep\ world.PNG);
             background-size: contain; 
@@ -386,15 +386,17 @@
         }
     }
     @media (width: 1440px) {
-    #home{
+    /* #home{
         display: none;
            
 
-        }
-    #pony{
+        } */
+    /* #pony{
             display: none;
+         
            
-        }
+        } */
+        
     #cr {
             background: url(./images/home/upbeep2024.PNG);
             background-size: contain; 
@@ -530,15 +532,14 @@
 }
 
 @media (width: 1470px) {
-    #home{
+    /* #home{
         display: none;
            
 
         }
     #pony{
             display: none;
-           
-        }
+        } */
     #cr {
             background: url(./images/home/upbeep2024.PNG);
             background-size: contain; 
@@ -672,7 +673,7 @@
 }
 
 }
-@media (width: 1680px) {
+@media (max-width: 1680px) {
             body {
             background-image: url(./images/home/Bg3.PNG);
             background-position: center center;
@@ -680,38 +681,40 @@
             overflow: hidden;
         }
         #home{
+            position: fixed;
+            background: url('./images/home/Home (1).PNG');
             background-size: contain; 
             background-repeat: no-repeat;
-            width: 480px;
-            height: 330px;
-            position: absolute;
-            left: 450px;
-            top: 490px;
+            background-position: center center;
+            height: 35vh;
+            left: -9vw;
+            bottom: 5vh;
             overflow: hidden;
-            z-index: -100;    
+            /* z-index: -100;     */
 
         }
         #pony{
+            position: fixed;
+            background: url('./images/home/Pony.PNG');
             background-size: contain; 
             background-repeat: no-repeat;
-            width: 420px;
-            height: 360px;
-            position: absolute;
-            left: 750px;
-            top: 140px;
+            background-position: center center;
+            height: 35vh;
+            left: 5%;
+            top: 22vh;
             overflow: hidden;
             z-index: -100;
            
         }
         #upbeep {
+            position: fixed;
             background: url(./images/home/Upbeep\ world.PNG);
             background-size: contain; 
-            position: relative;
-            top: 10px;
             background-repeat: no-repeat;
+            background-position: center center;
             width: 40vw;
             height: 18vh;
-            left: 200px;
+            left: 32%;
             overflow: hidden;
         }
         #cr {
@@ -723,20 +726,24 @@
             z-index: -100;
         }
             #mall {
-            position: absolute;
-            width: 35vw;
-            height: 22vw;
-            top: 1vh;
-            display: block;
-            left: 8vw;
+            position: fixed;
+            width: 30%;
+            height: 40%;
+            top: 6%;
+            left: 7%;
             background: url("./images/home/Mall1.PNG");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
             transition: background 0.3s ease;
+            
         }
         #mall:hover {
             background: url("./images/home/Mall2.PNG");
+            width: 30%;
+            height: 40%;
+            top: 6%;
+            left: 7%;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
@@ -755,7 +762,7 @@
             height: 22vw;
             bottom: 6vh;
             display: block;
-            right: 2vw;
+            right: -1vw;
             background: url("./images/home/Card1.PNG");
             background-size: contain;
             background-repeat: no-repeat;
@@ -767,24 +774,25 @@
             width: 28vw;
             height: 22vw;
             bottom: 6vh;
-            right: 1vw;
+            right: -1vw;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
         }
         #phone {
+
             position: fixed;
-            width: 35vw;
-            height: 47vh;
-            top: 3vh;
+            width: 30%;
+            height: 40%;
+            top: 7%;
             display: block;
-            right: 2vw;
+            right: 5%;
             background: url("./images/home/SOS1.PNG");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
             transition: background 0.3s ease;
-            z-index: 9;
+            
         }
         #phone:hover {
             background: url("./images/home/SOS2.png");
@@ -797,7 +805,7 @@
             width: 15vw;
             height: 28vh;
             bottom: 1vh;
-            right: 29vw;
+            right: 29%;
             background: url("./images/home/About\ us1.PNG");
             background-size: contain;
             background-repeat: no-repeat;
@@ -810,9 +818,10 @@
             width: 15vw;
             height: 28vh;
             bottom: 1vh;
-            right: 29vw;
+            right: 29%;
             background-size: contain;
             background-repeat: no-repeat;
+            background-position: center center;
         }
       #back {
       position: fixed;
@@ -837,10 +846,11 @@
     background-image: url("./images/sound/Sound1.PNG");
     width: 10vw;
     height: 10vh;
+    right: 1%;
     background-size: contain;
     background-repeat: no-repeat;
-    top: 120px;
-    right: 35px;
+    background-position: center center;
+    top: 9vh;
 
         }
     }
@@ -985,7 +995,7 @@
     right: -18px;
 }
 }
-@media (max-width: 4480px) {
+@media (width: 4480px) {
     body {
             background-image: url(./images/home/B4.png);
             background-size: cover; 
@@ -1151,8 +1161,10 @@
                 <!-- <img src="./images/home/upbeep2024.PNG" class="col-md-6 d-block justify-content-end"  style="width: 28%;"> -->
                 <div id="cr"></div>
             </div>
-            <img src="./images/home/Pony.PNG" id="pony">
-            <img src="./images/home/Home (1).PNG" id="home">
+            <div id="pony" ></div>
+            <div id="home" ></div>
+            <!-- <img src="./images/home/Pony.PNG" id="pony"> -->
+            <!-- <img src="./images/home/Home (1).PNG" id="home"> -->
         </div>
         <!-- <div class="row d-flex justify-content-start ps-3 w-50">
             <a href="characters.html" id="back"></a>

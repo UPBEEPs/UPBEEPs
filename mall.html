@@ -860,7 +860,7 @@ h1{
 }
 }
 
-@media screen and (width: 1680px) {
+@media screen and (max-width: 1680px) {
     #pd{
        padding-top: 3vh;
     }
@@ -871,29 +871,33 @@ h1{
         padding-left: 52px;
     }
     #headLine {
+    position: absolute;
     background-image: url('./images/mall/elements/Head\ line.PNG');
     background-position: center center; 
-    position: absolute;
     background-repeat: repeat-x;
     width: 150vw ;
     height: 4vh;
-    right: 0.01vw;
-    top: 12.5vh;
+    right: 0.01%;
+    top: 95%;
     object-fit: cover;
     
 }
     #allNext,#allBack{
         position: relative;
-        top: -8vh;
-        width: 4vw;
-        height: 8vh;
-        /* margin-top: -5vh; */
+        width: 10%;
+        height: 20%;
     }
-
+    #allNext{
+        left: 95%;
+    }
+    #allBack{
+        left: -4%;
+    }
     #reviewNext,#reviewBack{
-        width: 3vw;
-        height: 6vh;
-        margin-top: 25vh;
+        position: absolute;
+        width: 13%;
+        height: 6%;
+       margin-top: 20%;
     }
     #reviewBack{
         position: relative;
@@ -902,7 +906,7 @@ h1{
     }
     #reviewNext{
         position: relative;
-        left: 2vw; 
+        left: 93%; 
     }
     #product2{
     font-size: 50px;
@@ -966,17 +970,14 @@ h1{
     margin-right: 4.5vw;
 }
 h1{
-    font-size: 35px;
+    font-size: 30px;
     text-shadow: 2px 2px 2px #ffffff;
 }
 #promotion {
+    position: relative;
     background-image: url('./images/mall/products/longImgs/หน้าปก.PNG');
     background-size: cover;
-    /* background-repeat: no-repeat; */
     background-position: center center; 
-    height: 110vh;
-    position: relative;
-    top: 16vh;
     
 }
 #all,#top,#skirt,#dress,#acc, #set{
@@ -1001,12 +1002,6 @@ h1{
     width: 25px;
     height: 25px;
 }
-/* .gift {
-    width: 280px;
-    position: relative;
-    left: -35vw;
-    top: 30vh;
-} */
 .close {
     font-size: 60px;
     margin-left: 4vw;
@@ -1065,25 +1060,25 @@ h1{
         }
     #Btcarousel1{
         position: absolute;
-        top: 360px;
+        top: 56%;
         left: -4vw;
         opacity: 1;
     }
     #Btcarousel2{
         position: absolute;
-        top: 360px;
+        top: 55%;
         right: -4vw;
         opacity: 1;
 
     }
     #carouselprev{
-        width: 4vw;
-        height: 9vh;
+        width: 30%;
+        height: 15%;
 
     }
     #carouselnext{
-        width: 4vw;
-        height: 9vh;
+        width: 30%;
+        height: 15%;
     }
 
     h1{
@@ -1104,19 +1099,19 @@ h1{
 #line1{
     position: absolute;
     object-fit: contain;
-    width: 1105px;
-    top: 70px;
-    left: 235px;
+    width:81%;
+    top: 11%;
+    left: 9.5%;
 
 }
 #product1{
-    margin-left: 230px;
+    margin-left: 9%;
 }
     
 
 }
 
-@media (max-width: 2240px) {
+@media (width: 2240px) {
     .acc-name{
        font-size:  40px;
     }
