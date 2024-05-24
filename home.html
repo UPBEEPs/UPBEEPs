@@ -953,7 +953,6 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
-            transition: background 0.3s ease;
         }
         #mall:hover {
             background: url("./images/home/Mall2.PNG");
@@ -995,11 +994,10 @@
     right: -18px;
 }
 }
-@media (width: 4480px) {
+@media (max-width: 4480px) {
     body {
             background-image: url(./images/home/B4.png);
             background-size: cover; 
-            /* background-repeat: no-repeat; */
             background-position: center center;
            
             overflow: hidden;
@@ -1027,13 +1025,11 @@
             width: 38vw;
             height: 25vw;
             top: 1vh;
-            display: block;
             left: 2vw;
             background: url("./images/home/Mall1.PNG");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
-            transition: background 0.3s ease;
         }
         #mall:hover {
             background: url("./images/home/Mall2.PNG");
@@ -1097,11 +1093,12 @@
             width: 15vw;
             height: 28vh;
             bottom: 1vh;
-            right: 29vw;
+            right: 29%;
             background: url("./images/home/About\ us1.PNG");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
+            /* transition: background 0.3s ease; */
             z-index: 9;
         }
         #aboutus:hover {
@@ -1109,10 +1106,12 @@
             width: 15vw;
             height: 28vh;
             bottom: 1vh;
-            right: 29vw;
+            right: 29%;
             background-size: contain;
             background-repeat: no-repeat;
+            background-position: center center;
         }
+
       #back {
       position: fixed;
       width: 10vw; 
