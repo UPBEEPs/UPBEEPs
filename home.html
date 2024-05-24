@@ -673,7 +673,7 @@
 }
 
 }
-@media (max-width: 1680px) {
+@media (max-width: 4480px) {
             body {
             background-image: url(./images/home/Bg3.PNG);
             background-position: center center;
@@ -686,11 +686,11 @@
             background-size: contain; 
             background-repeat: no-repeat;
             background-position: center center;
-            height: 35vh;
+            height: 38vh;
             left: -9vw;
-            bottom: 5vh;
+            bottom: 3vh;
             overflow: hidden;
-            /* z-index: -100;     */
+            z-index: 10;
 
         }
         #pony{
@@ -714,7 +714,7 @@
             background-position: center center;
             width: 40vw;
             height: 18vh;
-            left: 32%;
+            left: 35%;
             overflow: hidden;
         }
         #cr {
@@ -727,23 +727,22 @@
         }
             #mall {
             position: fixed;
-            width: 30%;
+            width: 27%;
             height: 40%;
             top: 6%;
-            left: 7%;
+            left: 9%;
             background: url("./images/home/Mall1.PNG");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
-            transition: background 0.3s ease;
             
         }
         #mall:hover {
             background: url("./images/home/Mall2.PNG");
-            width: 30%;
+            width: 27%;
             height: 40%;
             top: 6%;
-            left: 7%;
+            left: 9%;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
@@ -760,9 +759,9 @@
             position: fixed;
             width: 28vw;
             height: 22vw;
-            bottom: 6vh;
+            bottom: 2vh;
             display: block;
-            right: -1vw;
+            right: 1vw;
             background: url("./images/home/Card1.PNG");
             background-size: contain;
             background-repeat: no-repeat;
@@ -773,17 +772,16 @@
             background: url("./images/home/Card2.PNG");
             width: 28vw;
             height: 22vw;
-            bottom: 6vh;
-            right: -1vw;
+            bottom: 2vh;
+            right: 1vw;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
         }
         #phone {
-
             position: fixed;
-            /* width: 30%;
-            height: 40%; */
+            width: 20%;
+            height: 44%;
             top: 7%;
             display: block;
             right: 9.5%;
@@ -805,12 +803,11 @@
             width: 15vw;
             height: 28vh;
             bottom: 1vh;
-            right: 29%;
+            right: 29.5%;
             background: url("./images/home/About\ us1.PNG");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
-            /* transition: background 0.3s ease; */
             z-index: 9;
         }
         #aboutus:hover {
@@ -818,26 +815,26 @@
             width: 15vw;
             height: 28vh;
             bottom: 1vh;
-            right: 29%;
+            right: 29.5%;
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
         }
       #back {
-      position: fixed;
+        position: fixed;
+        background: url("./images/sos/elements/Back\ pink1.PNG");
       width: 10vw; 
-      height: 10vh;
-      top: 25px;
-      background: url("./images/sos/elements/Back\ pink1.PNG");
+      height: 13vh;
+      left: 1%;
       background-size: contain;
       background-repeat: no-repeat;
-      transition: background 0.3s ease;
     }
     #back:hover {
       position: fixed;
-      width: 10vw; 
-      height: 10vh;
       background: url("./images/sos/elements/Back\ pink2.PNG");
+      width: 10vw; 
+      height: 13vh;
+      left: 1%;
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -855,7 +852,7 @@
         }
     }
 
-    @media (width: 2240px) {
+    /* @media (width: 2240px) {
         #back {
       position: relative;
       width: 50vw; 
@@ -930,7 +927,6 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
-            /* transition: background 0.3s ease; */
             z-index: 9;
         }
         #aboutus:hover {
@@ -993,8 +989,8 @@
     top: 100px;
     right: -18px;
 }
-}
-@media (max-width: 4480px) {
+} */
+/* @media (max-width: 4480px) {
     body {
             background-image: url(./images/home/B4.png);
             background-size: cover; 
@@ -1098,7 +1094,6 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
-            /* transition: background 0.3s ease; */
             z-index: 9;
         }
         #aboutus:hover {
@@ -1143,7 +1138,8 @@
 
         }
 
-}
+} */
+
     </style>
 </head>
 <body>
@@ -1157,31 +1153,16 @@
             </div>
 
             <div class="col-md-3 d-flex justify-content-end pt-2" style="z-index: -100;">
-                <!-- <img src="./images/home/upbeep2024.PNG" class="col-md-6 d-block justify-content-end"  style="width: 28%;"> -->
                 <div id="cr"></div>
             </div>
             <div id="pony" ></div>
             <div id="home" ></div>
-            <!-- <img src="./images/home/Pony.PNG" id="pony"> -->
-            <!-- <img src="./images/home/Home (1).PNG" id="home"> -->
         </div>
-        <!-- <div class="row d-flex justify-content-start ps-3 w-50">
-            <a href="characters.html" id="back"></a>
-          </div> -->
-        
-        <!-- <a href="characters.html" class="back" >
-            <img src="./images/characters/back.png" class="h-100 w-100" alt="Button 1" />
-          </a> -->
           <a href="mall.html">
             <div id="mall"></div>
           </a>
          
-         
-            
-          
-          <!-- แสดงรูปที่เลือกมาจากหน้าที่แล้ว -->
           <img class="characterImg" id="characterImage" src="" alt="Character">
-          <!-- แสดงรูปที่เลือกมาจากหน้าที่แล้ว -->
           <a href="aboutUs.html">
             <div id="aboutus"></div>
           </a>
